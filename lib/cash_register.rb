@@ -14,7 +14,7 @@ def add_item(item,price, quantity = 1)
   while quantity > 0 do
      self.item = item
     self.price = price
-    @@items << item
+    @items << item
     @total += price
     quantity = quantity - 1
   end
