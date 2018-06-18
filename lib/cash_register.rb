@@ -11,15 +11,13 @@ end
 
 def add_item(item,price, quantity = 1)
  
-  until quantity < 1 do
+  while quantity > 0 do
      self.item = item
     self.price = price
     @@items << item
     @total += price
     quantity = quantity - 1
   end
-  
-  
 end  
 
 def apply_discount
@@ -38,6 +36,7 @@ end
 def void_last_transaction
   @total = @total - self.price
 end
+
 def total
   @total
 end
